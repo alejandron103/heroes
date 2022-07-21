@@ -1,5 +1,5 @@
 import './App.scss'
-import HeroesContainer from './components/heroes-container'; 
+import HeroesContainer from './components/HeroesContainer'; 
 export default function App() {
   return (
     <div className="app">
