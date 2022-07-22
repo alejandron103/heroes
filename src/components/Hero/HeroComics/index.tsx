@@ -1,16 +1,14 @@
+import { useState, useEffect } from "react"
+import ComicDetail from "../../../components/ComicDetail"
+import HeroComic from "../HeroComic";
 
-export default function HeroComics({comics}){
-  if(comics.length === 0 || !comics) return <span>this Hero hasn't comics to show</span>
-  const comicsList = comics.slice(0, 3)
-    .map( (comic:Comic, index:number) => 
-    <li key={`${comic.name}-${index}`}>
-      {comic.name}
-    </li>
-        )
-      
+export default function HeroComics({ comics }) {
+  //condition if character hasn't comics
+  if (comics.length === 0 || !comics) return <span>this Hero hasn't comics to show</span>
+
   return (
     <ul className="Hero__comics">
-      {comicsList}
+      <HeroComic comics={comics} />
     </ul>
   )
 }

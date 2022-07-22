@@ -1,6 +1,16 @@
+@import "../../styles/helpers.scss";
 .Hero{
+  background-color: $white;
+  &__main-info{
+    display: flex; 
+  }
   &__image{
-    width: 160px;
-    height: 160px;
+    width: 200px;
+    height: 200px;
+    object-fit:contain;
+    border-radius:50%
+  }
+  &__info{
+    height: 200px;
   }
 }
