@@ -3,6 +3,7 @@
 body {
   background-color: $main-background;
   font-family: $main-font;
+  margin: 0;
 }
 :root {
   --result-columns: 2;
@@ -14,4 +15,21 @@ body {
 .ListGifs {
   column-count: var(--result-columns);
   column-gap: 1.5em;
+}
+
+Header{
+  width: 100%;
+  background-color: $black;
+  display: flex;
+  align-items: center;
+  padding: 0px 15px;
+  .logo{
+    object-fit: contain;
+    width: 120px;
+  }
+}
+
+.Finder{
+  margin-left: 40px;
+  display: block;
 }

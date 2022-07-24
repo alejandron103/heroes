@@ -35,6 +35,9 @@
     margin: 25px 0 0;
     font-size: 0;
     columns: 2;
+    opacity: 0;
+    height: 0;
+    transition: 0.8s ease-in;
     li{
       margin: 5px 0;
       display: inline-block;
@@ -43,7 +46,12 @@
       font-size: calculateRem(14px);
     }
   }
+  .showComics{
+    opacity: 1;
+    height: auto;
+  }
   &__btn{
+    cursor: pointer;
     margin-top: 20px;
     margin-left: 170px;
     padding: 7px 9px;

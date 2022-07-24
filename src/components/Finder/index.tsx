@@ -9,7 +9,7 @@ export default function Finder({handleSearch}){
   const handleChange = (event:any) => {
     setKeyword(event.target.value)
   }
-  return <form onSubmit={handleSubmit} >
+  return <form className='finder' onSubmit={handleSubmit} >
     <input placeholder="search character..." type="text" value={keyword} onChange={handleChange}/>
   </form>
 }

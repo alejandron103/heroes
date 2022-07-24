@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import {getHeroes} from '../../services/get-heroes';
 import ListHeroes from '../../components/ListHeroes';
-import Finder from '../../components/Finder';
+import Header from '../../components/Header';
 
 export default function HomePage(){
   const [heroes, setHeroes] = useState([])
@@ -19,7 +19,7 @@ export default function HomePage(){
   }, [keyword])
   return (
     <>
-      <Finder handleSearch={handlerFind} />
+      <Header handleSearch={handlerFind} />
       <ListHeroes heroes={heroes}/>
     </>
   )
