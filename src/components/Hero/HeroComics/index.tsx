@@ -3,12 +3,18 @@ import ComicDetail from "../../../components/ComicDetail"
 import HeroComic from "../HeroComic";
 
 export default function HeroComics({ comics }) {
-  //condition if character hasn't comics
-  if (comics.length === 0 || !comics) return <span>this Hero hasn't comics to show</span>
+  const [showComics, setShowComics] = useState(false);
 
-  return (
-    <ul className="Hero__comics">
-      <HeroComic comics={comics} />
-    </ul>
-  )
+  return <>
+    <button 
+      className="hero__btn" 
+      onClick={()=>{setShowComics(true)}}>
+      View More
+    </button>
+    { showComics && 
+      <ul className="Hero__comics">
+        <HeroComic comics={comics} />
+      </ul>
+    }
+  </>
 }

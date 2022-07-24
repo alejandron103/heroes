@@ -2,9 +2,13 @@
 
 body {
   background-color: $main-background;
+  font-family: $main-font;
 }
 :root {
   --result-columns: 2;
+  @media(max-width: 500px){
+  --result-columns: 1;
+  }
 }
 
 .ListGifs {

@@ -1,3 +1,13 @@
 $white: #ffffff;
 $main-background: #F4F4F4;
 $red-marvel: #EB3B38;
+
+$small-screen: 500px;
+$lg-screen: 1220px;
+
+$main-font: 'Marvel', sans-serif;
+
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return #{$remSize}rem;
+}

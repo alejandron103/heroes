@@ -1,16 +1,57 @@
 @import "../../styles/helpers.scss";
+
 .Hero{
   background-color: $white;
+  padding: 0 10px 10px;
+  margin: 20px;
   &__main-info{
     display: flex; 
   }
   &__image{
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     object-fit:contain;
     border-radius:50%
   }
   &__info{
-    height: 200px;
+    margin: 0px 20px;
+    height: 150px;
+    overflow: hidden;
+    word-break: break-all;
+    text-overflow: ellipsis;
+  }
+  &__title{
+    text-transform: uppercase;
+    font-size: calculateRem(20px);
+    line-height: 115%;
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+  &__comics{
+    display: block;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 25px 0 0;
+    font-size: 0;
+    columns: 2;
+    li{
+      margin: 5px 0;
+      display: inline-block;
+      width: 100%;
+      vertical-align: top;
+      font-size: calculateRem(14px);
+    }
+  }
+  &__btn{
+    margin-top: 20px;
+    margin-left: 170px;
+    padding: 7px 9px;
+    font-size:  calculateRem(12px);
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color: $red-marvel;
+    color: $white;
+    border: none;
   }
 }
